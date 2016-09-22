@@ -6,7 +6,8 @@ public class AuthenticationAgentActivity_AdalWebViewClient
 	implements
 		mono.android.IGCUserPeer
 {
-	static final String __md_methods;
+/** @hide */
+	public static final String __md_methods;
 	static {
 		__md_methods = 
 			"n_onLoadResource:(Landroid/webkit/WebView;Ljava/lang/String;)V:GetOnLoadResource_Landroid_webkit_WebView_Ljava_lang_String_Handler\n" +
@@ -14,7 +15,7 @@ public class AuthenticationAgentActivity_AdalWebViewClient
 			"n_onPageFinished:(Landroid/webkit/WebView;Ljava/lang/String;)V:GetOnPageFinished_Landroid_webkit_WebView_Ljava_lang_String_Handler\n" +
 			"n_onPageStarted:(Landroid/webkit/WebView;Ljava/lang/String;Landroid/graphics/Bitmap;)V:GetOnPageStarted_Landroid_webkit_WebView_Ljava_lang_String_Landroid_graphics_Bitmap_Handler\n" +
 			"";
-		mono.android.Runtime.register ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity/AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", AuthenticationAgentActivity_AdalWebViewClient.class, __md_methods);
+		mono.android.Runtime.register ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity+AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", AuthenticationAgentActivity_AdalWebViewClient.class, __md_methods);
 	}
 
 
@@ -22,14 +23,14 @@ public class AuthenticationAgentActivity_AdalWebViewClient
 	{
 		super ();
 		if (getClass () == AuthenticationAgentActivity_AdalWebViewClient.class)
-			mono.android.TypeManager.Activate ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity/AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity+AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "", this, new java.lang.Object[] {  });
 	}
 
 	public AuthenticationAgentActivity_AdalWebViewClient (java.lang.String p0) throws java.lang.Throwable
 	{
 		super ();
 		if (getClass () == AuthenticationAgentActivity_AdalWebViewClient.class)
-			mono.android.TypeManager.Activate ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity/AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.String, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0 });
+			mono.android.TypeManager.Activate ("Microsoft.IdentityModel.Clients.ActiveDirectory.AuthenticationAgentActivity+AdalWebViewClient, Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35", "System.String, mscorlib, Version=2.0.5.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e", this, new java.lang.Object[] { p0 });
 	}
 
 
@@ -64,7 +65,7 @@ public class AuthenticationAgentActivity_AdalWebViewClient
 
 	private native void n_onPageStarted (android.webkit.WebView p0, java.lang.String p1, android.graphics.Bitmap p2);
 
-	java.util.ArrayList refList;
+	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)
 	{
 		if (refList == null)

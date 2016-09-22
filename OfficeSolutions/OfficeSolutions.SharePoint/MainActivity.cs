@@ -34,10 +34,10 @@ namespace OfficeSolutions.SharePoint
 		}
 
 
-		protected async Task<Boolean> CreateList(string token)
+		protected async Task<bool> CreateList(string token)
 		{
 			var client = new HttpClient();
-			client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 			var mediaType = new MediaTypeWithQualityHeaderValue ("application/A");
 			mediaType.Parameters.Add (new NameValueHeaderValue ("odata", "verbose"));
 			client.DefaultRequestHeaders.Accept.Add (mediaType);
@@ -45,7 +45,7 @@ namespace OfficeSolutions.SharePoint
 			var contents = new StringContent (body);
 			contents.Headers.ContentType = MediaTypeHeaderValue.Parse( "application/json;odata=verbose");
 			try {
-				var postResult = await client.PostAsync ("https://mayurtendulkar.sharepoint.com/_api/web/lists/", contents);
+				var postResult = await client.PostAsync ("https://classsolutions.sharepoint.com/sites/Vinicius/_api/web/lists/", contents);
 				var result = postResult.EnsureSuccessStatusCode();
 				Toast.MakeText (this, "List created successfully! Seeding tasks.", ToastLength.Long).Show();
 				return true;
@@ -56,7 +56,7 @@ namespace OfficeSolutions.SharePoint
 			}
 		}
 
-		protected async Task<Boolean> CreateItems(string token)
+		protected async Task<bool> CreateItems(string token)
 		{
 			var client = new HttpClient();
 			client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
@@ -70,7 +70,7 @@ namespace OfficeSolutions.SharePoint
 			contents.Headers.ContentType = MediaTypeHeaderValue.Parse( "application/json;odata=verbose");
 			try {
 
-				var postResult = await client.PostAsync ("https://mayurtendulkar.sharepoint.com/_api/web/lists/GetByTitle('TasksByAndroid')/items", contents);
+				var postResult = await client.PostAsync ("https://classsolutions.sharepoint.com/sites/Vinicius/_api/web/lists/GetByTitle('TasksByAndroid')/items", contents);
 				var result = postResult.EnsureSuccessStatusCode();
 				if(result.IsSuccessStatusCode)
 					Toast.MakeText (this, "List item created successfully!", ToastLength.Long).Show();
@@ -82,15 +82,15 @@ namespace OfficeSolutions.SharePoint
 			}
 		}
 
-		protected async Task<Boolean> FetchListItems(string token)
+		protected async Task<bool> FetchListItems(string token)
 		{
 			var client = new HttpClient();
-			client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token);
+			client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
 			var mediaType = new MediaTypeWithQualityHeaderValue ("application/json");
 			mediaType.Parameters.Add (new NameValueHeaderValue ("odata", "verbose"));
 			client.DefaultRequestHeaders.Accept.Add (mediaType);
 			try {
-				var result = await client.GetStringAsync("https://mayurtendulkar.sharepoint.com/_api/web/lists/GetByTitle('TasksByAndroid')/items");
+				var result = await client.GetStringAsync("https://classsolutions.sharepoint.com/sites/Vinicius/_api/web/lists/GetByTitle('TasksByAndroid')/items");
 				var data = JsonConvert.DeserializeObject<OfficeSolutions.SharePoint.Model.ListItemModels>(result);
 				ListAdapter = new ListItemAdapter(this, data.D.Results);
 				}

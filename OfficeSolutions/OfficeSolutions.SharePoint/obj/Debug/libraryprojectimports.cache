@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Users\Vinicius\Source\Repos\O365ClientV3\OfficeSolutions\OfficeSolutions.SharePoint\obj\Debug\__library_projects__\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>C:\Users\Vinicius\Source\Repos\O365ClientV3\OfficeSolutions\OfficeSolutions.SharePoint\obj\Debug\__library_projects__\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Users\Vinicius\Source\Repos\O365ClientV3\OfficeSolutions\OfficeSolutions.SharePoint\obj\Debug\__library_projects__\Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>
